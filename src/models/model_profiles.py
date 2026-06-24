@@ -35,6 +35,18 @@ MODEL_PROFILES = {
         speed=7.0,
         cost=0.0
     ),
+
+    "gemma2": ModelProfile(
+        name="Gemma 2",
+        provider="ollama",
+        model_id="gemma2",
+        coding=7.0,
+        reasoning=8.0,
+        math=8.5,
+        general=9.0,
+        speed=8.0,
+        cost=0.0
+    ),
 }
 
 def get_model_profile(model_name: str) -> ModelProfile:
