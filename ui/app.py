@@ -2,7 +2,7 @@ import sys
 sys.path.insert(0, ".")
 import streamlit as st
 from src.utils.router import Router
-from src.models.ollama_client import OllamaClient
+from src.models.groq_client import GroqClient
 
 st.set_page_config(page_title="Multi-LLM Router", page_icon="🤖", layout="wide")
 st.title("🤖 Multi-LLM Intelligent Routing System")
@@ -10,7 +10,7 @@ st.markdown("*Automatically routes your query to the best AI model with full exp
 st.divider()
 
 router = Router()
-client = OllamaClient()
+client = GroqClient()
 
 query = st.text_area("Enter your query:", height=100)
 
