@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MODEL_MAP = {
-    "llama3.2": "llama-3.2-3b-preview",
-    "mistral": "mixtral-8x7b-32768",
-    "gemma2": "gemma2-9b-8192"
+    "llama3.2": "llama-3.2-11b-vision-preview",
+    "mistral": "llama-3.3-70b-versatile",
+    "gemma2": "llama-3.1-8b-instant"
 }
 
 class GroqClient:
