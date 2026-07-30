@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MODEL_MAP = {
-    "llama3.2": "llama-3.2-11b-vision-preview",
+    "llama3.2": "llama-3.1-8b-instant",
     "mistral": "llama-3.3-70b-versatile",
     "gemma2": "llama-3.1-8b-instant"
 }
@@ -14,7 +14,7 @@ class GroqClient:
         self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
     def generate(self, model_name: str, query: str) -> dict:
-        groq_model = MODEL_MAP.get(model_name, "llama-3.2-3b-preview")
+        groq_model = MODEL_MAP.get(model_name, "llama-3.1-8b-instant")
         try:
             response = self.client.chat.completions.create(
                 model=groq_model,
