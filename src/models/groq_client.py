@@ -14,7 +14,7 @@ class GroqClient:
         self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
     def generate(self, model_name: str, query: str) -> dict:
-        groq_model = MODEL_MAP.get(model_name, "llama-3.1-8b-instant")
+        groq_model = MODEL_MAP.get(model_name, "openai/gpt-oss-20b")
         try:
             response = self.client.chat.completions.create(
                 model=groq_model,
