@@ -4,9 +4,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MODEL_MAP = {
-    "llama3.2": "llama-3.1-8b-instant",
-    "mistral": "llama-3.3-70b-versatile",
-    "gemma2": "llama-3.1-8b-instant"
+    "llama3.2": "openai/gpt-oss-20b",
+    "mistral": "openai/gpt-oss-120b",
+    "gemma2": "qwen/qwen3.6-27b"
 }
 
 class GroqClient:
